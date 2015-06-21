@@ -1,0 +1,548 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.css'>
+    
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='//d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.js' type='text/javascript'></script>
+    <script src='//nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 900px;
+      height: 500px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'chart14c06657671a' class = 'rChart nvd3'></div>    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawchart14c06657671a()
+    });
+    function drawchart14c06657671a(){  
+      var opts = {
+ "dom": "chart14c06657671a",
+"width": "900",
+"height": "500",
+"x": "model",
+"y": "mpg",
+"type": "multiBarChart",
+"id": "chart14c06657671a" 
+},
+        data = [
+ {
+ "mpg":             21,
+"cylinders":              6,
+"displacement":            160,
+"horsepower":            110,
+"drat":            3.9,
+"weight":           2.62,
+"qsec":          16.46,
+"vs":              0,
+"am":              1,
+"gear":              4,
+"carb":              4,
+"model": "Mazda RX4" 
+},
+{
+ "mpg":             21,
+"cylinders":              6,
+"displacement":            160,
+"horsepower":            110,
+"drat":            3.9,
+"weight":          2.875,
+"qsec":          17.02,
+"vs":              0,
+"am":              1,
+"gear":              4,
+"carb":              4,
+"model": "Mazda RX4 Wag" 
+},
+{
+ "mpg":           22.8,
+"cylinders":              4,
+"displacement":            108,
+"horsepower":             93,
+"drat":           3.85,
+"weight":           2.32,
+"qsec":          18.61,
+"vs":              1,
+"am":              1,
+"gear":              4,
+"carb":              1,
+"model": "Datsun 710" 
+},
+{
+ "mpg":           21.4,
+"cylinders":              6,
+"displacement":            258,
+"horsepower":            110,
+"drat":           3.08,
+"weight":          3.215,
+"qsec":          19.44,
+"vs":              1,
+"am":              0,
+"gear":              3,
+"carb":              1,
+"model": "Hornet 4 Drive" 
+},
+{
+ "mpg":           18.7,
+"cylinders":              8,
+"displacement":            360,
+"horsepower":            175,
+"drat":           3.15,
+"weight":           3.44,
+"qsec":          17.02,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              2,
+"model": "Hornet Sportabout" 
+},
+{
+ "mpg":           18.1,
+"cylinders":              6,
+"displacement":            225,
+"horsepower":            105,
+"drat":           2.76,
+"weight":           3.46,
+"qsec":          20.22,
+"vs":              1,
+"am":              0,
+"gear":              3,
+"carb":              1,
+"model": "Valiant" 
+},
+{
+ "mpg":           14.3,
+"cylinders":              8,
+"displacement":            360,
+"horsepower":            245,
+"drat":           3.21,
+"weight":           3.57,
+"qsec":          15.84,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4,
+"model": "Duster 360" 
+},
+{
+ "mpg":           24.4,
+"cylinders":              4,
+"displacement":          146.7,
+"horsepower":             62,
+"drat":           3.69,
+"weight":           3.19,
+"qsec":             20,
+"vs":              1,
+"am":              0,
+"gear":              4,
+"carb":              2,
+"model": "Merc 240D" 
+},
+{
+ "mpg":           22.8,
+"cylinders":              4,
+"displacement":          140.8,
+"horsepower":             95,
+"drat":           3.92,
+"weight":           3.15,
+"qsec":           22.9,
+"vs":              1,
+"am":              0,
+"gear":              4,
+"carb":              2,
+"model": "Merc 230" 
+},
+{
+ "mpg":           19.2,
+"cylinders":              6,
+"displacement":          167.6,
+"horsepower":            123,
+"drat":           3.92,
+"weight":           3.44,
+"qsec":           18.3,
+"vs":              1,
+"am":              0,
+"gear":              4,
+"carb":              4,
+"model": "Merc 280" 
+},
+{
+ "mpg":           17.8,
+"cylinders":              6,
+"displacement":          167.6,
+"horsepower":            123,
+"drat":           3.92,
+"weight":           3.44,
+"qsec":           18.9,
+"vs":              1,
+"am":              0,
+"gear":              4,
+"carb":              4,
+"model": "Merc 280C" 
+},
+{
+ "mpg":           16.4,
+"cylinders":              8,
+"displacement":          275.8,
+"horsepower":            180,
+"drat":           3.07,
+"weight":           4.07,
+"qsec":           17.4,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              3,
+"model": "Merc 450SE" 
+},
+{
+ "mpg":           17.3,
+"cylinders":              8,
+"displacement":          275.8,
+"horsepower":            180,
+"drat":           3.07,
+"weight":           3.73,
+"qsec":           17.6,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              3,
+"model": "Merc 450SL" 
+},
+{
+ "mpg":           15.2,
+"cylinders":              8,
+"displacement":          275.8,
+"horsepower":            180,
+"drat":           3.07,
+"weight":           3.78,
+"qsec":             18,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              3,
+"model": "Merc 450SLC" 
+},
+{
+ "mpg":           10.4,
+"cylinders":              8,
+"displacement":            472,
+"horsepower":            205,
+"drat":           2.93,
+"weight":           5.25,
+"qsec":          17.98,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4,
+"model": "Cadillac Fleetwood" 
+},
+{
+ "mpg":           10.4,
+"cylinders":              8,
+"displacement":            460,
+"horsepower":            215,
+"drat":              3,
+"weight":          5.424,
+"qsec":          17.82,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4,
+"model": "Lincoln Continental" 
+},
+{
+ "mpg":           14.7,
+"cylinders":              8,
+"displacement":            440,
+"horsepower":            230,
+"drat":           3.23,
+"weight":          5.345,
+"qsec":          17.42,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4,
+"model": "Chrysler Imperial" 
+},
+{
+ "mpg":           32.4,
+"cylinders":              4,
+"displacement":           78.7,
+"horsepower":             66,
+"drat":           4.08,
+"weight":            2.2,
+"qsec":          19.47,
+"vs":              1,
+"am":              1,
+"gear":              4,
+"carb":              1,
+"model": "Fiat 128" 
+},
+{
+ "mpg":           30.4,
+"cylinders":              4,
+"displacement":           75.7,
+"horsepower":             52,
+"drat":           4.93,
+"weight":          1.615,
+"qsec":          18.52,
+"vs":              1,
+"am":              1,
+"gear":              4,
+"carb":              2,
+"model": "Honda Civic" 
+},
+{
+ "mpg":           33.9,
+"cylinders":              4,
+"displacement":           71.1,
+"horsepower":             65,
+"drat":           4.22,
+"weight":          1.835,
+"qsec":           19.9,
+"vs":              1,
+"am":              1,
+"gear":              4,
+"carb":              1,
+"model": "Toyota Corolla" 
+},
+{
+ "mpg":           21.5,
+"cylinders":              4,
+"displacement":          120.1,
+"horsepower":             97,
+"drat":            3.7,
+"weight":          2.465,
+"qsec":          20.01,
+"vs":              1,
+"am":              0,
+"gear":              3,
+"carb":              1,
+"model": "Toyota Corona" 
+},
+{
+ "mpg":           15.5,
+"cylinders":              8,
+"displacement":            318,
+"horsepower":            150,
+"drat":           2.76,
+"weight":           3.52,
+"qsec":          16.87,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              2,
+"model": "Dodge Challenger" 
+},
+{
+ "mpg":           15.2,
+"cylinders":              8,
+"displacement":            304,
+"horsepower":            150,
+"drat":           3.15,
+"weight":          3.435,
+"qsec":           17.3,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              2,
+"model": "AMC Javelin" 
+},
+{
+ "mpg":           13.3,
+"cylinders":              8,
+"displacement":            350,
+"horsepower":            245,
+"drat":           3.73,
+"weight":           3.84,
+"qsec":          15.41,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4,
+"model": "Camaro Z28" 
+},
+{
+ "mpg":           19.2,
+"cylinders":              8,
+"displacement":            400,
+"horsepower":            175,
+"drat":           3.08,
+"weight":          3.845,
+"qsec":          17.05,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              2,
+"model": "Pontiac Firebird" 
+},
+{
+ "mpg":           27.3,
+"cylinders":              4,
+"displacement":             79,
+"horsepower":             66,
+"drat":           4.08,
+"weight":          1.935,
+"qsec":           18.9,
+"vs":              1,
+"am":              1,
+"gear":              4,
+"carb":              1,
+"model": "Fiat X1-9" 
+},
+{
+ "mpg":             26,
+"cylinders":              4,
+"displacement":          120.3,
+"horsepower":             91,
+"drat":           4.43,
+"weight":           2.14,
+"qsec":           16.7,
+"vs":              0,
+"am":              1,
+"gear":              5,
+"carb":              2,
+"model": "Porsche 914-2" 
+},
+{
+ "mpg":           30.4,
+"cylinders":              4,
+"displacement":           95.1,
+"horsepower":            113,
+"drat":           3.77,
+"weight":          1.513,
+"qsec":           16.9,
+"vs":              1,
+"am":              1,
+"gear":              5,
+"carb":              2,
+"model": "Lotus Europa" 
+},
+{
+ "mpg":           15.8,
+"cylinders":              8,
+"displacement":            351,
+"horsepower":            264,
+"drat":           4.22,
+"weight":           3.17,
+"qsec":           14.5,
+"vs":              0,
+"am":              1,
+"gear":              5,
+"carb":              4,
+"model": "Ford Pantera L" 
+},
+{
+ "mpg":           19.7,
+"cylinders":              6,
+"displacement":            145,
+"horsepower":            175,
+"drat":           3.62,
+"weight":           2.77,
+"qsec":           15.5,
+"vs":              0,
+"am":              1,
+"gear":              5,
+"carb":              6,
+"model": "Ferrari Dino" 
+},
+{
+ "mpg":             15,
+"cylinders":              8,
+"displacement":            301,
+"horsepower":            335,
+"drat":           3.54,
+"weight":           3.57,
+"qsec":           14.6,
+"vs":              0,
+"am":              1,
+"gear":              5,
+"carb":              8,
+"model": "Maserati Bora" 
+},
+{
+ "mpg":           21.4,
+"cylinders":              4,
+"displacement":            121,
+"horsepower":            109,
+"drat":           4.11,
+"weight":           2.78,
+"qsec":           18.6,
+"vs":              1,
+"am":              1,
+"gear":              4,
+"carb":              2,
+"model": "Volvo 142E" 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != "bulletChart"){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        chart
+  .reduceXTicks(false)
+  .margin({
+ "left":    100,
+"bottom":    100 
+})
+          
+        chart.xAxis
+  .staggerLabels(true)
+  .axisLabel("Model")
+
+        
+        
+        
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+    <style> svg text {font-size: 8px;}</style>    
+  </body>
+</html>

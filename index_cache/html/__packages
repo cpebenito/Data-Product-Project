@@ -1,0 +1,10 @@
+base
+shiny
+dplyr
+shinyapps
+knitr
+devtools
+slidify
+png
+slidifyLibraries
+XML

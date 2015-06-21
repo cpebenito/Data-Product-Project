@@ -1,0 +1,131 @@
+---
+title       : Developing Data Product using Slidify
+subtitle    : App for Motor Trend Cars Dataset (1973-74)
+author      : cpebenito
+job         : 
+framework   : io2012      # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [shiny, interactive, nvd3, bootstrap] 
+mode        : selfcontained   # {standalone, draft}
+knit        : slidify::knit2slides
+ext_widgets : {rCharts: [libraries/nvd3]}
+runtime     : shiny
+--- 
+
+## About this App: 
+
+
+
+The data in this app came from the R dataset('mtcars'). With this app, the user can see a graphical info of the cars included in the dataset compiled by Motor Trend Cars back in 1974. 
+
+1. The graph can be accessed by selecting one of the parameters in the dropdown window. 
+
+2. Also included in this app, is an option to check which of these cars has the best MPG based on the number of cylinders. 
+
+3. Check this [link](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html) for more information about the dataset.
+
+
+
+Please check it out and hope it would show the user how with just a few commands, one can produce a really cool application using Shiny. 
+
+
+
+Thanks for checking.
+
+--- .class #id 
+
+## Let's view the dataset
+
+```{r, echo=FALSE}
+head(mtcars)
+
+```
+
+---
+
+## Structure of Dataset(mtcars)
+
+```{r, echo=FALSE  }
+
+data(mtcars)
+str(mtcars)
+
+```
+
+---
+
+## Slide for App
+
+```{r, echo=FALSE}
+library(devtools)
+library(shiny)
+library(dplyr)
+library(datasets)
+data(mtcars)
+
+cars <- mutate(mtcars, model = rownames(mtcars))
+#cars <- rename(cars, cylinders = cyl, displacement = disp, horsepower = hp, weight = wt)
+
+#install.packages('stringr')
+#devtools::install_github('muschellij2/slidify')
+
+#install_github('slidify', 'ramnathv')
+#install_github('slidifyLibraries', 'ramnathv')
+
+library(slidify)
+library(slidifyLibraries)
+```
+## Image of Shiny App
+
+<img src="/assets/img/mtchart2.png" width="800" height="400" />
+
+--- 
+
+```{r opts.label = 'shiny'}
+
+slidifyUI(    
+    
+  titlePanel("Motor Trend Cars 1973-74 models"),
+   sidebarLayout(      
+      sidebarPanel(
+         selectInput('trans', 'Transmission Type (Automatic = 0, Manual =1)', c('0', '1')),
+        selectInput('specs', 'Choose the Specifications you want to check:', 
+                    choices=colnames(cars)),
+       
+       # checkboxGroupInput("cyl", "How Many Cylinders are you looking at for yor next car?(choose 1 at a time for now)",
+        #                   c("4 cyl" = "4",
+         #                    "6 cyl" = "6",
+          #                   "8 cyl" = "8")),
+        
+        submitButton('Submit'),
+        
+      #  dateInput("date", "Date:"),  
+       
+        helpText ("About this App: The data in this app came from the R dataset mtcars")
+      
+                 
+     ),
+        
+      # This is where the barplot will be
+      mainPanel(
+    
+      #cat('<iframe src="assets/fig/n1.html" width=20%, height=100></iframe>')
+        #tags$div(id = 'nvd3plot', class='shiny-html-output nvd3 rChart')
+       )
+            
+    )
+   )
+
+```
+
+
+---
+
+## Bar Plot of ShinyApp
+
+Check this [link](https://cpebenito.shinyapps.io/PeerProject) for a live demo of the App
+
+<iframe src="assets/fig/n1.html" width=50%, height=200></iframe>
+
+

@@ -1,0 +1,360 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='http://nvd3.org/assets/css/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'chart1bc834f0415e' class = 'rChart nvd3'></div>    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawchart1bc834f0415e()
+    });
+    function drawchart1bc834f0415e(){  
+      var opts = {
+ "dom": "chart1bc834f0415e",
+"width":    800,
+"height":    400,
+"x": "model",
+"y": "mpg",
+"group": "am",
+"type": "multiBarChart",
+"id": "chart1bc834f0415e" 
+},
+        data = [
+ {
+ "mpg":           21.4,
+"cylinders":              6,
+"displacement":            258,
+"horsepower":            110,
+"drat":           3.08,
+"weight":          3.215,
+"qsec":          19.44,
+"vs":              1,
+"am":              0,
+"gear":              3,
+"carb":              1,
+"model": "Hornet 4 Drive" 
+},
+{
+ "mpg":           18.7,
+"cylinders":              8,
+"displacement":            360,
+"horsepower":            175,
+"drat":           3.15,
+"weight":           3.44,
+"qsec":          17.02,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              2,
+"model": "Hornet Sportabout" 
+},
+{
+ "mpg":           18.1,
+"cylinders":              6,
+"displacement":            225,
+"horsepower":            105,
+"drat":           2.76,
+"weight":           3.46,
+"qsec":          20.22,
+"vs":              1,
+"am":              0,
+"gear":              3,
+"carb":              1,
+"model": "Valiant" 
+},
+{
+ "mpg":           14.3,
+"cylinders":              8,
+"displacement":            360,
+"horsepower":            245,
+"drat":           3.21,
+"weight":           3.57,
+"qsec":          15.84,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4,
+"model": "Duster 360" 
+},
+{
+ "mpg":           24.4,
+"cylinders":              4,
+"displacement":          146.7,
+"horsepower":             62,
+"drat":           3.69,
+"weight":           3.19,
+"qsec":             20,
+"vs":              1,
+"am":              0,
+"gear":              4,
+"carb":              2,
+"model": "Merc 240D" 
+},
+{
+ "mpg":           22.8,
+"cylinders":              4,
+"displacement":          140.8,
+"horsepower":             95,
+"drat":           3.92,
+"weight":           3.15,
+"qsec":           22.9,
+"vs":              1,
+"am":              0,
+"gear":              4,
+"carb":              2,
+"model": "Merc 230" 
+},
+{
+ "mpg":           19.2,
+"cylinders":              6,
+"displacement":          167.6,
+"horsepower":            123,
+"drat":           3.92,
+"weight":           3.44,
+"qsec":           18.3,
+"vs":              1,
+"am":              0,
+"gear":              4,
+"carb":              4,
+"model": "Merc 280" 
+},
+{
+ "mpg":           17.8,
+"cylinders":              6,
+"displacement":          167.6,
+"horsepower":            123,
+"drat":           3.92,
+"weight":           3.44,
+"qsec":           18.9,
+"vs":              1,
+"am":              0,
+"gear":              4,
+"carb":              4,
+"model": "Merc 280C" 
+},
+{
+ "mpg":           16.4,
+"cylinders":              8,
+"displacement":          275.8,
+"horsepower":            180,
+"drat":           3.07,
+"weight":           4.07,
+"qsec":           17.4,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              3,
+"model": "Merc 450SE" 
+},
+{
+ "mpg":           17.3,
+"cylinders":              8,
+"displacement":          275.8,
+"horsepower":            180,
+"drat":           3.07,
+"weight":           3.73,
+"qsec":           17.6,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              3,
+"model": "Merc 450SL" 
+},
+{
+ "mpg":           15.2,
+"cylinders":              8,
+"displacement":          275.8,
+"horsepower":            180,
+"drat":           3.07,
+"weight":           3.78,
+"qsec":             18,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              3,
+"model": "Merc 450SLC" 
+},
+{
+ "mpg":           10.4,
+"cylinders":              8,
+"displacement":            472,
+"horsepower":            205,
+"drat":           2.93,
+"weight":           5.25,
+"qsec":          17.98,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4,
+"model": "Cadillac Fleetwood" 
+},
+{
+ "mpg":           10.4,
+"cylinders":              8,
+"displacement":            460,
+"horsepower":            215,
+"drat":              3,
+"weight":          5.424,
+"qsec":          17.82,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4,
+"model": "Lincoln Continental" 
+},
+{
+ "mpg":           14.7,
+"cylinders":              8,
+"displacement":            440,
+"horsepower":            230,
+"drat":           3.23,
+"weight":          5.345,
+"qsec":          17.42,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4,
+"model": "Chrysler Imperial" 
+},
+{
+ "mpg":           21.5,
+"cylinders":              4,
+"displacement":          120.1,
+"horsepower":             97,
+"drat":            3.7,
+"weight":          2.465,
+"qsec":          20.01,
+"vs":              1,
+"am":              0,
+"gear":              3,
+"carb":              1,
+"model": "Toyota Corona" 
+},
+{
+ "mpg":           15.5,
+"cylinders":              8,
+"displacement":            318,
+"horsepower":            150,
+"drat":           2.76,
+"weight":           3.52,
+"qsec":          16.87,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              2,
+"model": "Dodge Challenger" 
+},
+{
+ "mpg":           15.2,
+"cylinders":              8,
+"displacement":            304,
+"horsepower":            150,
+"drat":           3.15,
+"weight":          3.435,
+"qsec":           17.3,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              2,
+"model": "AMC Javelin" 
+},
+{
+ "mpg":           13.3,
+"cylinders":              8,
+"displacement":            350,
+"horsepower":            245,
+"drat":           3.73,
+"weight":           3.84,
+"qsec":          15.41,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4,
+"model": "Camaro Z28" 
+},
+{
+ "mpg":           19.2,
+"cylinders":              8,
+"displacement":            400,
+"horsepower":            175,
+"drat":           3.08,
+"weight":          3.845,
+"qsec":          17.05,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              2,
+"model": "Pontiac Firebird" 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != "bulletChart"){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        
+          
+        
+
+        
+        
+        
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+    <script></script>    
+  </body>
+</html>
